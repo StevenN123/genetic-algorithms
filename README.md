@@ -36,7 +36,7 @@ The Traveling Salesman Problem (TSP): Given a list of cities and distances betwe
 ## Genetic Algorithm Components
 
 ### 1. Initialization
-Create random population of routes (permutations of city indices)
+Create random population of routes (Arrangement of city indices)
 
 ### 2. Fitness Evaluation
 Fitness = 1 / total_route_distance (shorter routes = higher fitness)
