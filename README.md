@@ -22,7 +22,7 @@ The Traveling Salesman Problem (TSP): Given a list of cities and distances betwe
 | 9 | (40, 120) |
 | 10 | (100, 120) |
 
-## ⚙️ Algorithm Analysis
+## Algorithm Analysis
 
 ### Time Complexity
 - **Overall:** O(g·p·n) where:
