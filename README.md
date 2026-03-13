@@ -2,11 +2,11 @@
 
 #  Genetic Algorithm for Traveling Salesman Problem (TSP)
 
-A Python implementation of a Genetic Algorithm to approximate solutions for the Traveling Salesman Problem (TSP), one of the most famous NP-hard problems.
+A Python implementation of a Genetic Algorithm to estimate solutions for the Traveling Salesman Problem (TSP), one of the most famous NP-hard problems.
 
 ## Problem Description
 
-The Traveling Salesman Problem (TSP): Given a list of cities and distances between them, find the shortest possible route that visits each city exactly once and returns to the starting city. This is NP-hard, so we use a genetic algorithm to find near-optimal solutions.
+The Traveling Salesman Problem (TSP): Given a list of cities and distances between them, find the shortest possible route that visits each city exactly once and returns to the starting city. This is NP-hard, so we use a genetic algorithm to find closest solutions.
 
 ### Example with 10 Cities
 | City | Coordinates |
@@ -36,7 +36,7 @@ The Traveling Salesman Problem (TSP): Given a list of cities and distances betwe
 ## Genetic Algorithm Components
 
 ### 1. Initialization
-Create random population of routes (Arrangement of city indices)
+Make a random population of routes (city index layout).
 
 ### 2. Fitness Evaluation
 Fitness = 1 / total_route_distance (shorter routes = higher fitness)
