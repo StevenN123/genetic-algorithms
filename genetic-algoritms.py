@@ -44,9 +44,9 @@ class Route:
             # Use the provided route
             self.route = route
         
-        # Initialize cache for distance (None means not calculated yet)
+        # Set up the cache for distance (None means not calculated yet)
         self.distance = None
-        # Initialize cache for fitness (None means not calculated yet)
+        # Set up the cache for fitness (None means not calculated yet)
         self.fitness = None
     
     def calculate_distance(self):
@@ -55,7 +55,7 @@ class Route:
         if self.distance is not None:
             return self.distance
         
-        # Initialize total distance to 0
+        # Setting up total distance to 0
         total = 0
         # Get the number of cities in the route
         n = len(self.route)
@@ -114,7 +114,7 @@ class GeneticAlgorithmTSP:
         self.population = []
         # Initialize best route as None
         self.best_route = None
-        # Initialize best distance as infinity
+        # Set up the best distance as infinity
         self.best_distance = float('inf')
     
     def create_individual(self):
@@ -158,14 +158,14 @@ class GeneticAlgorithmTSP:
     
     def selection(self, ranked_pop):
         """Select parents using roulette wheel selection"""
-        # List to store selected parent indices
+        # List to store selected parent indexes
         results = []
         # Calculate total fitness of all routes
         total_fitness = sum(ranked_pop[i][1] for i in range(len(ranked_pop)))
         
         # Select parents (excluding elite count)
         for _ in range(len(ranked_pop) - self.elite_size):
-            # Pick a random point on the roulette wheel
+            # Pick a random point on the wheel
             pick = random.uniform(0, total_fitness)
             current = 0
             # Find which route corresponds to the picked point
@@ -175,14 +175,14 @@ class GeneticAlgorithmTSP:
                     # Add this route index to selection results
                     results.append(ranked_pop[i][0])
                     break
-        # Return list of selected parent indices
+        # Return list of selected parent indexes
         return results
     
     def mating_pool(self, selection_results):
         """Create mating pool from selected parents"""
         # Create empty pool list
         pool = []
-        # Loop through selected indices
+        # Loop through selected indexes
         for i in range(len(selection_results)):
             # Get the index of the selected parent
             index = selection_results[i]
@@ -196,7 +196,7 @@ class GeneticAlgorithmTSP:
         # Get number of cities
         n = self.num_cities
         
-        # Choose random start and end positions for the segment
+        # Choose random start and end positions for the part
         start = random.randint(0, n - 1)
         end = random.randint(0, n - 1)
         
@@ -242,7 +242,7 @@ class GeneticAlgorithmTSP:
         route.distance = None
         route.fitness = None
         
-        # Return the mutated route
+        # Return the route
         return route
     
     def next_generation(self):
